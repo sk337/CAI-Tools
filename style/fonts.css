@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'Anime Ace';
+    src: url('_URL_/animeace2_reg-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Anime Ace';
+    src: url('_URL_/animeace2_ital-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Anime Ace';
+    src: url('_URL_/animeace2_bld-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'Manga Temple';
+    src: url('_URL_/mangat-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Manga Temple';
+    src: url('_URL_/mangati-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Manga Temple';
+    src: url('_URL_/mangatb-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+
+
+
+@font-face {
+    font-family: 'Enfantine';
+    src: url('_URL_/enfantine-regular-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Enfantine';
+    src: url('_URL_/enfantine-bold-webfont.woff2') format('woff2');
+    font-weight: 700;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'Kirsty';
+    src: url('_URL_/kirsty_rg-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Kirsty';
+    src: url('_URL_/kirsty_rg_it-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Kirsty';
+    src: url('_URL_/kirsty_bd-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Kirsty';
+    src: url('_URL_/kirsty_bd_it-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'Planewalker';
+    src: url('_URL_/planewalker-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Planewalker';
+    src: url('_URL_/planewalker_italic-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Planewalker';
+    src: url('_URL_/planewalker_bold-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Planewalker';
+    src: url('_URL_/planewalker_bold_italic-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'Medieval Sharp';
+    src: url('_URL_/medievalsharp-book-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Medieval Sharp';
+    src: url('_URL_/medievalsharp-bookoblique-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Medieval Sharp';
+    src: url('_URL_/medievalsharp-bold-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Medieval Sharp';
+    src: url('_URL_/medievalsharp-boldoblique-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'Berenika Book';
+    src: url('_URL_/berenika-book-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Berenika Book';
+    src: url('_URL_/berenika-bookoblique-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Berenika Book';
+    src: url('_URL_/berenika-bold-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Berenika Book';
+    src: url('_URL_/berenika-boldoblique-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'Klaudia';
+    src: url('_URL_/klaudia-book-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Klaudia';
+    src: url('_URL_/klaudia-bookoblique-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Klaudia';
+    src: url('_URL_/klaudia-bold-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Klaudia';
+    src: url('_URL_/klaudia-boldoblique-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'Jetbrains Mono';
+    src: url('_URL_/jetbrainsmono-regular-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Jetbrains Mono';
+    src: url('_URL_/jetbrainsmono-italic-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Jetbrains Mono';
+    src: url('_URL_/jetbrainsmono-bold-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Jetbrains Mono';
+    src: url('_URL_/jetbrainsmono-bolditalic-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 700;
+}

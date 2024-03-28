@@ -14,6 +14,17 @@ a[href="#-"] {
     text-decoration: underline;
 }
 
+[data-tool="cai_tools"] input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+[data-tool="cai_tools"] input,
+[data-tool="cai_tools"] textarea {
+    background-color: #5b5b5b;
+    color: #ffffff;
+}
+
 
 a[href="#-"] {
     text-decoration: none;
@@ -73,13 +84,200 @@ a[href="#-"] {
 
 
 
+#custombg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: all 0.5s ease-in-out;
+    background-size: cover;
+    pointer-events: none;
+    user-select: none;
+    /*For images*/
+}
+
+#custombg video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /*For videos*/
+}
+
+#keywordBox {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    max-height: 200px;
+    overflow-y: auto;
+    top: -6px;
+    transform: translateY(-100%);
+    left: 10px;
+    max-width: 260px;
+    transition: all 0.1s ease-in-out;
+    border-radius: 8px;
+    border: 1px solid #676767;
+    background-color: #272727;
+    z-index: 100;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+textarea[placeholder^="Message"]:focus+#keywordBox,
+textarea[placeholder="Type a message"]:focus+#keywordBox,
+#keywordBox:hover {
+    display: flex;
+}
+
+#keywordBox li {
+    font-size: 1.2rem;
+    color: #ffffff;
+    padding: 7px 10px;
+    border-bottom: 1px solid #676767;
+    cursor: pointer;
+}
+
+#keywordBox li:hover {
+    background-color: #474747;
+}
+
+#keywordBox span {
+    padding: 4px 7px;
+}
+
+
+/* Redesign */
+html.dark body.custombg-mode:has(#custombg) main>*>.size-full>.h-full {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(2px) !important;
+}
+
+html.light body.custombg-mode:has(#custombg) main>*>.size-full>.h-full {
+    background-color: rgb(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(3px) !important;
+}
+
+html.light body.custombg-mode [data-index]:nth-child(1) * {
+    color: #000000 !important;
+}
+
+html.dark body.custombg-mode [data-index]:nth-child(1) * {
+    color: #ffffff !important;
+}
+
+/* Chat2 */
+.custombg-mode #root .chat2>* {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-image: unset !important;
+    background-clip: unset !important;
+}
+
+.custombg-mode #root .chat2>*:first-child {
+    z-index: 3;
+}
+
+.custombg-mode #root .chat2 .chatheaderbg-normal {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.custombg-mode #root .chat2 .chatfooterbg-normal {
+    background: none !important;
+}
+
+.custombg-mode #root .chat2>*>* {
+    background: unset !important;
+}
 
 
 
 
+
+html.dark body.custombg-mode main main .rounded-2xl:has(p[node]) {
+    background-color: rgba(38, 39, 43, 0.8) !important;
+}
+
+html.dark body.custombg-mode main main textarea[maxlength="4092"] {
+    background-color: rgba(38, 39, 43, 0.4) !important;
+}
+
+html.light body.custombg-mode main main .rounded-2xl:has(p[node]) {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+html.light body.custombg-mode main main textarea[maxlength="4092"] {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+
+
+
+
+.cait_design_tools {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cait_design_tools h4 {
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.cait_design_tools .dt-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 6px;
+    padding: 6px 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dt-body hgroup {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dt-body hgroup span {
+    opacity: 0.8;
+    font-size: 0.8rem;
+}
+
+.dt-body hgroup input {
+    padding: 3px 5px;
+    width: 55px;
+    border-radius: 6px;
+}
+
+.dt-body .dt-font {
+    padding: 5px 5px;
+    border-radius: 6px;
+}
+
+
+
+
+
+
+
+.cait_modal_cont,
 .cai_tools-cont,
 .cait_settings-cont,
 .cait_memory_manager-cont,
+.cait_bg_manager-cont,
 .cait_info-cont {
     display: none;
     /*flex*/
@@ -94,35 +292,44 @@ a[href="#-"] {
     justify-content: center;
 }
 
+.cait_modal_cont.active,
 .cai_tools-cont.active,
 .cait_settings-cont.active,
 .cait_memory_manager-cont.active,
+.cait_bg_manager-cont.active,
 .cait_info-cont.active {
     display: flex;
 }
 
+.cait_modal_box .cait_modal_header,
 .cai_tools .cait-header,
 .cait_settings .caits_header,
 .cait_memory_manager .caitmm_header,
+.cait_bg_manager .caitbgm_header,
 .cait_info .caiti_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    width: 100%;
 }
 
+.cait_modal_box .cait_modal_header h4,
 .cai_tools .cait-header h4,
 .cait_settings .caits_header h4,
 .cait_memory_manager .caitmm_header h4,
+.cait_bg_manager .caitbgm_header h4,
 .cait_info .caiti_header h4 {
     font-size: 18px;
     margin: 0;
     padding: 0;
 }
 
+.cait_modal_box .cait_modal_header span,
 .cai_tools .cait-header span,
 .cait_settings .caits_header span,
 .cait_memory_manager .caitmm_header span,
+.cait_bg_manager .caitbgm_header span,
 .cait_info .caiti_header span {
     display: flex;
     align-items: center;
@@ -136,17 +343,22 @@ a[href="#-"] {
     font-family: monospace;
 }
 
+.cait_modal_box .cait_modal_header span:hover,
 .cai_tools .cait-header span:hover,
 .cait_settings .caits_header span:hover,
 .cait_memory_manager .caitmm_header span:hover,
+.cait_bg_manager .caitbgm_header span:hover,
 .cait_info .caiti_header span:hover {
     background-color: #3b3b3b;
 }
 
+.cait_modal_box .cait_modal_body,
 .cai_tools .cait-body,
 .cait_settings .caits-body,
 .cait_memory_manager .caitmm-body,
+.cait_bg_manager .caitbgm-body,
 .cait_info .caiti-body {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -154,6 +366,20 @@ a[href="#-"] {
 }
 
 
+
+.cait_modal_box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #272727;
+    color: #ffffff;
+    border-radius: 8px;
+    width: 96%;
+    max-width: 280px;
+    max-height: 90vh;
+    overflow-y: auto;
+    overscroll-behavior: none;
+}
 
 
 .cait_info {
@@ -201,6 +427,42 @@ a[href="#-"] {
 .cai_tools .donate_link {
     font-size: 1rem;
     padding: 0 14px 6px;
+    display: none;
+}
+
+.cai_tools .patreon-note {
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-style: italic;
+    padding: 0 8px 6px;
+}
+
+.cai_tools .patreon-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cai_tools .cait_patreon_login,
+.cai_tools .cait_patreon_link {
+    align-self: center;
+    border: 1px solid #c8c8c8;
+    background-color: #343434;
+    outline: unset;
+    margin: 0 14px 6px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.cai_tools .cait_patreon_login:hover,
+.cai_tools .cait_patreon_link:hover {
+    background-color: #525252;
 }
 
 .cai_tools .cait-body span.cait_warning {
@@ -284,6 +546,10 @@ a[href="#-"] {
     opacity: 0.6;
 }
 
+.cai_tools .cait_import {
+    display: none;
+}
+
 
 
 
@@ -349,11 +615,6 @@ a[href="#-"] {
     align-items: center;
     gap: 8px;
     margin-bottom: 8px;
-}
-
-.cait_memory_manager input[name="cait_mm_active"] {
-    width: 1.1rem;
-    height: 1.1rem;
 }
 
 .cait_memory_manager .note {
@@ -451,6 +712,217 @@ a[href="#-"] {
 
 
 
+.cait_bg_manager {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 1px solid #676767;
+    background-color: #272727;
+    color: #ffffff;
+    border-radius: 8px;
+    width: 96%;
+    max-height: 90vh;
+    overflow-y: auto;
+    overscroll-behavior: none;
+    padding-bottom: 20px;
+}
+
+.cait_bg_manager input[type="text"][placeholder^="keyword"] {
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+.cait_bg_manager .bgm-action-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/*
+.cait_bg_manager .bgm-action-cont .save {
+    align-self: center;
+    padding: 4px 10px;
+    color: #ffffff;
+    border-radius: 4px;
+    border: unset;
+    background-color: #36a325;
+}
+
+.cait_bg_manager .bgm-action-cont .save:hover {
+    background-color: #2bc613;
+}
+*/
+.cait_bg_manager .bgm-action-cont .bgm_main_status-cont {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+}
+
+.cait_bg_manager .bgm-action-cont label {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cait_bg_manager .bgm_main_link-cont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cait_bg_manager .bgm_main_link-cont .main_bg_url {
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    flex-grow: 1;
+}
+
+.cait_bg_manager .bgm_main_link-cont .main_bg_url_submit {
+    padding: 3px 7px;
+    color: #ffffff;
+    border-radius: 4px;
+    border: unset;
+    background-color: #25a33a;
+    flex-shrink: 0;
+}
+
+
+.cait_bg_manager .bgm-action-cont .bgm_roleplay_status-cont {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px 18px;
+}
+
+
+.cait_bg_manager .add-new-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cait_bg_manager .add-new-cont .add-new-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cait_bg_manager .add-new-cont .add_new_bg {
+    padding: 3px 7px;
+    color: #ffffff;
+    border-radius: 4px;
+    border: unset;
+    background-color: #2577a3;
+}
+
+.cait_bg_manager .add-new-cont .import_roleplay_bg_url {
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+.cait_bg_manager .add-new-cont .clean_bg_file {
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #e55d5d;
+}
+
+.cait_bg_manager .add-new-cont .clean_bg_file:hover {
+    text-decoration: underline;
+}
+
+
+
+.cait_bg_manager .list-header {
+    padding: 8px 8px 5px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ababab;
+    margin-bottom: 16px;
+}
+
+.cait_bg_manager ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 18px;
+}
+
+.cait_bg_manager ul li {
+    display: flex;
+    gap: 10px 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cait_bg_manager .bg_item_actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.cait_bg_manager .bg_item_actions .bg_item_save,
+.cait_bg_manager .bg_item_actions .bg_item_delete {
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #25d025;
+}
+
+.cait_bg_manager .bg_item_actions .bg_item_save:hover,
+.cait_bg_manager .bg_item_actions .bg_item_delete:hover {
+    text-decoration: underline;
+}
+
+.cait_bg_manager .bg_item_actions .bg_item_delete {
+    color: red;
+}
+
+.cait_bg_manager ul li .bgimg-cont {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cait_bg_manager ul li .bgimg-cont img {
+    max-height: 140px;
+    width: 80%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: contain;
+    object-position: left;
+}
+
+.cait_bg_manager ul li .bgimg-cont video {
+    max-height: 140px;
+    max-width: 80%;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.cait_bg_manager ul li .bgimg-cont span {
+    max-height: 140px;
+    overflow: hidden;
+    font-size: 0.9rem;
+    color: #c72020;
+}
+
+
+
+
 
 
 
@@ -483,5 +955,32 @@ a[href="#-"] {
         padding: 8px 14px;
         min-height: 100px;
         max-height: 180px;
+    }
+
+    .cait_bg_manager {
+        width: 60%;
+    }
+
+    .cait_bg_manager .list-header {
+        font-size: 1.8rem;
+    }
+
+    .cait_bg_manager ul li {
+        flex-direction: row;
+    }
+
+    .cait_bg_manager ul li .bgimg-cont {
+        justify-content: flex-start;
+    }
+
+    .cait_bg_manager ul li .bgimg-cont img {
+        max-width: 90%;
+        max-height: 170px;
+        width: auto;
+        height: auto;
+    }
+
+    .cait_bg_manager .bg_item_actions {
+        gap: 20px;
     }
 }

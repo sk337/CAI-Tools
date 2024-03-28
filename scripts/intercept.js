@@ -130,7 +130,7 @@ wsHook.before = function (data, url, wsObject) {
 
 
 xhook.before(function (request) {
-    // Save access token for to keep cai tools functioning
+    // Save access token to keep cai tools functioning
     const AccessToken = request.headers.Authorization;
     if (AccessToken && AccessToken.includes('Token ')) {
         createAccessTokenMeta(AccessToken);
