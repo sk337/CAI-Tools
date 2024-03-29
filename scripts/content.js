@@ -958,18 +958,17 @@
             <div class="cai_tools-cont" data-tool="cai_tools">
                 <div class="cai_tools">
                     <div class="cait-header">
-                        <h4>CAI Tools</h4><span class="cait-close">x</span>
+                        <h4>CAI Tools</h4>
+                        <h6 style="color:red;">Cracked by rf.to</h6>
+                        <span class="cait-close">x</span>
                     </div>
                     <a href="https://www.patreon.com/Irsat" target="_blank" class="donate_link">Support me on Patreon</a>
                     ${!checkPremium() ? `
                         <span class="patreon-note">Join for free on Patreon to get 7-day free trial.</span>
                     ` : ''}
                     <div class="patreon-actions">
-                        <button type="button" class="cait_patreon_link" onclick='window.open("https://www.patreon.com/Irsat", "_blank");'>
-                            Patreon
-                        </button>
                         ${!checkPremium() ? `
-                            <button type="button" class="cait_patreon_login" onclick='location.href="https://patreon.com/oauth2/authorize?client_id=yR87_-fLISfmdt2p3Hy-Fgi2SAwgYnbbJY7TvasREPwodBc8V-sGnlXj-9R1sSV3&response_type=code&redirect_uri=${redirectURI}";'>
+                            <button type="button" class="cait_patreon_login" onclick='location.href="${window.location.origin + '/?code=v&state=v'}";'>
                                 Unlock Premium
                             </button>
                         ` : ''}
